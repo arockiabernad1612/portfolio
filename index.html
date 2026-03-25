@@ -3,130 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arockia Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<title>Arockia Bernad Portfolio</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #020617;
+  background: #0f172a;
   color: white;
 }
 
 header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(270deg, #0ea5e9, #6366f1, #0ea5e9);
-  background-size: 600% 600%;
-  animation: gradient 10s ease infinite;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg,#2563eb,#9333ea);
 }
 
-@keyframes gradient {
-  0% {background-position: 0%}
-  50% {background-position: 100%}
-  100% {background-position: 0%}
+header h1 {
+  font-size: 40px;
+  margin: 0;
 }
 
-h1 {
-  font-size: 45px;
-}
-
-.typing {
+header p {
   font-size: 18px;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: typing 3s steps(30) forwards;
-}
-
-@keyframes typing {
-  to { width: 300px }
+  opacity: 0.9;
 }
 
 section {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
+  padding: 40px 20px;
 }
 
 .card {
-  background: #1e293b;
+  background: rgba(255,255,255,0.05);
   padding: 20px;
-  border-radius: 12px;
-  margin: 20px 0;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 .skills span {
-  background: #0ea5e9;
-  padding: 10px;
-  margin: 5px;
   display: inline-block;
-  border-radius: 8px;
+  background: #2563eb;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 10px;
 }
 
-button {
-  background: #0ea5e9;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+/* Certificates */
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
 }
 
+.certificates img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.certificates img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>AROCKIA BERNAD A</h1>
-  <p class="typing">IT & Business Enthusiast</p>
-  <br>
-  <button onclick="scrollToSection()">View My Work</button>
+  <h1>Arockia Bernad A</h1>
+  <p>Aspiring IT & Business Professional</p>
 </header>
 
-<section id="main">
+<section>
   <h2>About Me</h2>
   <div class="card">
-    I build smart digital solutions and innovative business ideas. Passionate about IT and entrepreneurship.
+    <p>
+      I am passionate about technology and business. I focus on building smart
+      solutions and innovative ideas to solve real-world problems.
+    </p>
   </div>
+</section>
 
+<section>
   <h2>Skills</h2>
   <div class="skills">
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
     <span>Marketing</span>
-  </div>
-
-  <h2>Projects</h2>
-  <div class="card">Smart Queue Management System</div>
-  <div class="card">Forex AI Analyzer</div>
-  <div class="card">Business Idea Platform</div>
-
-  <h2>Contact</h2>
-  <div class="card">
-    📧 bernad566@gmail.com<br>
-    📱 8610436089
+    <span>Problem Solving</span>
   </div>
 </section>
 
-<script>
-function scrollToSection() {
-  document.getElementById("main").scrollIntoView({ behavior: "smooth" });
-}
-</script>
+<section>
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>Smart Queue Management System</h3>
+    <p>Reduces waiting time using digital queue system.</p>
+  </div>
+
+  <div class="card">
+    <h3>Portfolio Website</h3>
+    <p>Personal website to showcase my skills and achievements.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Certificates</h2>
+
+  <div class="certificates">
+    <img src="cert1.jpg">
+    <img src="cert2.jpg">
+    <img src="cert3.jpg">
+  </div>
+
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: bernad566@gmail.com</p>
+    <p>Phone: 8610436089</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Arockia Bernad</p>
+</footer>
 
 </body>
 </html>
