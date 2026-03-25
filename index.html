@@ -3,149 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arockia Bernad Portfolio</title>
+<title>Arockia Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #0f172a;
+  background: #020617;
   color: white;
 }
 
 header {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #0ea5e9, #6366f1, #0ea5e9);
+  background-size: 600% 600%;
+  animation: gradient 10s ease infinite;
 }
 
-header h1 {
+@keyframes gradient {
+  0% {background-position: 0%}
+  50% {background-position: 100%}
+  100% {background-position: 0%}
+}
+
+h1 {
   font-size: 45px;
 }
 
-header p {
+.typing {
   font-size: 18px;
-  margin-top: 10px;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) forwards;
+}
+
+@keyframes typing {
+  to { width: 300px }
 }
 
 section {
-  padding: 50px 20px;
+  padding: 40px;
   max-width: 900px;
   margin: auto;
 }
 
-h2 {
-  color: #38bdf8;
-  margin-bottom: 20px;
-}
-
 .card {
   background: #1e293b;
-  padding: 25px;
-  margin-bottom: 20px;
+  padding: 20px;
   border-radius: 12px;
+  margin: 20px 0;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(56,189,248,0.3);
+  transform: scale(1.05);
 }
 
 .skills span {
-  display: inline-block;
   background: #0ea5e9;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 10px;
   margin: 5px;
+  display: inline-block;
+  border-radius: 8px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-  margin-top: 30px;
+button {
+  background: #0ea5e9;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
+
 </style>
-
 </head>
 
 <body>
 
 <header>
   <h1>AROCKIA BERNAD A</h1>
-  <p>Aspiring IT & Business Professional</p>
+  <p class="typing">IT & Business Enthusiast</p>
+  <br>
+  <button onclick="scrollToSection()">View My Work</button>
 </header>
 
-<section>
+<section id="main">
   <h2>About Me</h2>
   <div class="card">
-    <p>
-      I am passionate about technology and business. I focus on building smart digital solutions
-      and innovative ideas that solve real-world problems. I am continuously improving my skills
-      in web development and business strategy.
-    </p>
+    I build smart digital solutions and innovative business ideas. Passionate about IT and entrepreneurship.
   </div>
-</section>
 
-<section>
   <h2>Skills</h2>
-  <div class="card skills">
+  <div class="skills">
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
-    <span>Basic Coding</span>
-    <span>Communication</span>
-    <span>Marketing Ideas</span>
-    <span>Problem Solving</span>
+    <span>Marketing</span>
   </div>
-</section>
 
-<section>
   <h2>Projects</h2>
+  <div class="card">Smart Queue Management System</div>
+  <div class="card">Forex AI Analyzer</div>
+  <div class="card">Business Idea Platform</div>
 
-  <div class="card">
-    <h3>Smart Queue Management System</h3>
-    <p>Digital solution to manage queues efficiently in hospitals, banks, and offices.</p>
-  </div>
-
-  <div class="card">
-    <h3>Forex AI Analyzer Website</h3>
-    <p>Web-based tool to analyze forex patterns with smart UI and logic.</p>
-  </div>
-
-  <div class="card">
-    <h3>Online Business Idea Platform</h3>
-    <p>Platform to explore startup ideas and business strategies.</p>
-  </div>
-
-</section>
-
-<section>
-  <h2>Education</h2>
-  <div class="card">
-    <p>Currently pursuing education and continuously learning IT & business skills.</p>
-  </div>
-</section>
-
-<section>
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: bernad566@gmail.com</p>
-    <p>Phone: 8610436089</p>
+    📧 bernad566@gmail.com<br>
+    📱 8610436089
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Arockia Bernad A | Portfolio</p>
-</footer>
+<script>
+function scrollToSection() {
+  document.getElementById("main").scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
