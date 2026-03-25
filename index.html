@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arockia Bernad Portfolio</title>
+<title>Arockia Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -12,89 +14,11 @@ body {
   transition: 0.4s;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #0f172a;
-  color: white;
-}
+/* Dark & Light */
+body.dark { background: #0f172a; color: white; }
+body.light { background: #f8fafc; color: black; }
 
-/* Light Mode */
-body.light {
-  background: #f8fafc;
-  color: black;
-}
-
-header {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg,#2563eb,#9333ea);
-  color: white;
-}
-
-header img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 4px solid white;
-  margin-bottom: 15px;
-}
-
-section {
-  padding: 40px 20px;
-}
-
-.card {
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Skills */
-.skills span {
-  display: inline-block;
-  background: #2563eb;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 10px;
-  color: white;
-}
-
-/* Certificates */
-.certificates {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-}
-
-.certificates img {
-  width: 100%;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.certificates img:hover {
-  transform: scale(1.05);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  background: #2563eb;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-/* Toggle Button */
+/* Toggle */
 .toggle {
   position: fixed;
   top: 20px;
@@ -106,16 +30,100 @@ section {
   cursor: pointer;
 }
 
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg,#2563eb,#9333ea);
+  color: white;
+}
+
+header img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  transition: 0.4s;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #2563eb;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+/* Certificates */
+.certificates {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificates img {
+  width: 300px;
+  border-radius: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.certificates img:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 /* Animation */
 .fade {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(40px);
   transition: 1s;
 }
 
 .fade.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
 }
 </style>
 </head>
@@ -125,20 +133,16 @@ section {
 <div class="toggle" onclick="toggleMode()">🌙</div>
 
 <header>
-  <img src="profile.jpg" alt="Profile">
+  <img src="images/profile.jpg">
   <h1>Arockia Bernad A</h1>
   <p>Aspiring IT & Business Professional</p>
-
   <a href="resume.pdf" download class="btn">Download Resume</a>
 </header>
 
 <section class="fade">
   <h2>About Me</h2>
   <div class="card">
-    <p>
-      I am passionate about technology and business. I build smart digital solutions
-      and innovative ideas to solve real-world problems.
-    </p>
+    <p>I build smart digital solutions and innovative ideas.</p>
   </div>
 </section>
 
@@ -148,30 +152,22 @@ section {
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
-    <span>Marketing</span>
-    <span>Problem Solving</span>
   </div>
 </section>
 
 <section class="fade">
   <h2>Projects</h2>
-  <div class="card">
-    <h3>Smart Queue Management System</h3>
-    <p>Reduces waiting time using digital queue system.</p>
-  </div>
-
-  <div class="card">
-    <h3>Portfolio Website</h3>
-    <p>Showcase of my skills and projects.</p>
-  </div>
+  <div class="card">Smart Queue System</div>
+  <div class="card">Portfolio Website</div>
 </section>
 
+<!-- 🔥 ONLY CHANGE HERE -->
 <section class="fade">
   <h2>Certificates</h2>
   <div class="certificates">
-    <img src="cert1.jpg">
-    <img src="cert2.jpg">
-    <img src="cert3.jpg">
+    <img src="images/cert1.jpg">
+    <img src="images/cert2.jpg">
+    <img src="images/cert3.jpg">
   </div>
 </section>
 
@@ -179,20 +175,18 @@ section {
   <h2>Contact</h2>
   <div class="card">
     <p>Email: bernad566@gmail.com</p>
-    <p>Phone: 8610436089</p>
   </div>
 </section>
+
+<footer>
+  <p>© 2026 Arockia</p>
+</footer>
 
 <script>
 function toggleMode() {
   let body = document.body;
-  if (body.classList.contains("dark")) {
-    body.classList.remove("dark");
-    body.classList.add("light");
-  } else {
-    body.classList.remove("light");
-    body.classList.add("dark");
-  }
+  body.classList.toggle("dark");
+  body.classList.toggle("light");
 }
 
 /* Scroll Animation */
@@ -201,9 +195,7 @@ let elements = document.querySelectorAll(".fade");
 window.addEventListener("scroll", () => {
   elements.forEach(el => {
     let position = el.getBoundingClientRect().top;
-    let screen = window.innerHeight;
-
-    if (position < screen - 100) {
+    if (position < window.innerHeight - 100) {
       el.classList.add("show");
     }
   });
